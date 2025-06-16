@@ -47,7 +47,7 @@ const ExcuseGeneratorPage = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:3000/generate-excuse", {
+      const response = await fetch("https://excusely-backend.onrender.com/generate-excuse", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
