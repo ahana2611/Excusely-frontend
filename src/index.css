@@ -1,0 +1,118 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light Theme: "Sanity Edition" */
+    --background: 210 17% 98%; /* Off White */
+    --foreground: 240 30% 14%; /* Navy */
+
+    --card: 210 17% 95%;
+    --card-foreground: 240 30% 14%;
+
+    --popover: 210 17% 95%;
+    --popover-foreground: 240 30% 14%;
+
+    --primary: 197 100% 47%; /* Sky Blue */
+    --primary-foreground: 210 17% 98%; /* Off White */
+
+    --secondary: 141 85% 80%; /* Mint Green */
+    --secondary-foreground: 240 30% 14%; /* Navy */
+
+    --muted: 210 17% 94%;
+    --muted-foreground: 240 20% 40%;
+
+    --accent: 0 100% 71%; /* Coral */
+    --accent-foreground: 240 30% 14%; /* Navy */
+
+    --destructive: 0 100% 71%; /* Coral */
+    --destructive-foreground: 210 17% 98%; /* Off White */
+
+    --border: 210 17% 90%;
+    --input: 210 17% 96%;
+    --ring: 197 100% 47%; /* Sky Blue */
+
+    --radius: 0.75rem;
+
+    /* Sidebar variables */
+    --sidebar-background: 210 17% 98%;
+    --sidebar-foreground: 240 30% 14%;
+    --sidebar-primary: 197 100% 47%;
+    --sidebar-primary-foreground: 210 17% 98%;
+    --sidebar-accent: 141 85% 80%;
+    --sidebar-accent-foreground: 240 30% 14%;
+    --sidebar-border: 210 17% 90%;
+    --sidebar-ring: 197 100% 47%;
+  }
+
+  .dark {
+    /* Dark Theme: "I Can’t Anymore” Edition */
+    --background: 287 58% 8%; /* Deep Plum (BG) */
+    --foreground: 17 43% 94%; /* Soft Ivory */
+
+    --card: 287 40% 12%;
+    --card-foreground: 17 43% 94%;
+
+    --popover: 287 40% 12%;
+    --popover-foreground: 17 43% 94%;
+
+    --primary: 262 63% 50%; /* Vibrant Purple */
+    --primary-foreground: 17 43% 94%; /* Soft Ivory */
+
+    --secondary: 46 68% 47%; /* Antique Gold */
+    --secondary-foreground: 287 58% 8%; /* Deep Plum (BG) */
+
+    --muted: 287 30% 15%;
+    --muted-foreground: 17 20% 80%;
+
+    --accent: 349 70% 36%; /* Crimson Red */
+    --accent-foreground: 17 43% 94%; /* Soft Ivory */
+
+    --destructive: 349 70% 36%; /* Crimson Red */
+    --destructive-foreground: 17 43% 94%; /* Soft Ivory */
+
+    --border: 287 20% 20%;
+    --input: 287 30% 15%;
+    --ring: 262 63% 50%; /* Vibrant Purple */
+
+    /* Sidebar variables - dark theme */
+    --sidebar-background: 287 58% 8%;
+    --sidebar-foreground: 17 43% 94%;
+    --sidebar-primary: 262 63% 50%;
+    --sidebar-primary-foreground: 17 43% 94%;
+    --sidebar-accent: 46 68% 47%;
+    --sidebar-accent-foreground: 287 58% 8%;
+    --sidebar-border: 287 20% 20%;
+    --sidebar-ring: 262 63% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+}
